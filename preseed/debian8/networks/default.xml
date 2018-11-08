@@ -1,0 +1,18 @@
+<network>
+  <name>default</name>
+  <uuid>0507c234-ee1b-4175-884e-8663c00f73b5</uuid>
+  <forward mode='nat'>
+    <nat>
+      <port start='10000' end='20000'/>
+    </nat>
+  </forward>
+  <bridge name='virbr0' stp='on' delay='0'/>
+  <mac address='52:54:00:a4:14:a4'/>
+  <ip address='192.168.122.1' netmask='255.255.255.0'>
+    <dhcp>
+      <range start='192.168.122.2' end='192.168.122.99'/>
+       <host mac='52:54:00:6d:8b:59' name='vm-d8-blesta' ip='192.168.122.100'/>
+       <host mac='52:54:00:d3:54:27' name='vm-d8-vesta' ip='192.168.122.101'/>
+    </dhcp>
+  </ip>
+</network>
