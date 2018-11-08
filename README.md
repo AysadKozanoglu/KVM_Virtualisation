@@ -94,7 +94,7 @@ location links are image repo links from distro images
 #### preseed install debian
 ```bash
 OS="preesed-debian8";
-virt-install --connect=qemu:///system --name=${OS} --ram=1024 --vcpus=2 --disk path=/var/lib/libvirt/images/$OS,size=8,bus=virtio,format=qcow2 --initrd-inject=preseed.cfg --location http://ftp.de.debian.org/debian/dists/jessie/main/installer-amd64 --os-type linux --os-variant debian8 --controller usb,model=none --graphics none --noautoconsole --network bridge=virbr0 --extra-args="auto=true hostname="${OS}" domain="webhosting.high-t.de" console=tty0 console=ttyS0,115200n8 serial"
+virt-install --connect=qemu:///system --name=${OS} --ram=1024 --vcpus=2 --disk path=/var/lib/libvirt/images/$OS,size=8,bus=virtio,format=qcow2 --initrd-inject=preseed.cfg --location http://ftp.de.debian.org/debian/dists/jessie/main/installer-amd64 --os-type linux --os-variant debian8 --controller usb,model=none --graphics none --noautoconsole --network bridge=virbr0 --extra-args="auto=true hostname="${OS}" domain="vm1.yourserver.com" console=tty0 console=ttyS0,115200n8 serial"
 ```
 #### os variant list --os-variant
 ```
