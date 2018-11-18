@@ -281,9 +281,48 @@ virsh edit <vm name>
 <vcpu placement='stait  virsh vcpuinfoc'>6</vcpu>
 virsh vcpuinfo <vm name>
 ```
+#### CPU increasing
+```bash
+virsh edit <vm name>
+<vcpu placement='stait  virsh vcpuinfoc'>6</vcpu>
+virsh vcpuinfo <vm name>
+```
 
-#### disk increasing
+### vm disk increasing /resize
+ #### on the kvm
 ```bash
 # show current info of vm disk
 virsh domblklist <vm name> --details
+qemu-img resize /var/lib/libvirt/images/VM-Name +4G
+fdisk -l /var/lib/libvirt/images/VM-Name
+```
+ #### on the vm
+  ```
+  # on the VM 
+  roo@vm:/ fdisk -l /dev/vda
+
+  Command (m for help): p
+  Device     Boot    Start      End  Sectors Size Id Type
+/dev/vda1  *        2048 33554432 33552385  16G 83 Linux
+
+  Command (m for help): d
+  [1,2.5]: 1
+  #  swap auch löschen und danach mit p wieder erstellen, nachdem primary ext partition erstellt wurde(start und end sector per default übernehmen)
+  Command (m for help): d 
+  [1,2.5]: 2
+  Command (m for help): n
+  [primary ,extend]: p
+  partition number: 1
+  # WICHTIG: start sector von oben entnehmen !!
+  Command (m for help): t
+  # ext4
+  type: 83
+Command (m for help): n
+  [primary ,extend]: p
+  partition number: 2
+# start und endsector per default übernehmen 
+   Command (m for help): w
+  roo@vm:/ resize2fs /dev/sda1 
+  roo@vm:/ reboot 
+  ```
 ```
