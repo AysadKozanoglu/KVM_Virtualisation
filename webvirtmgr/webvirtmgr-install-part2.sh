@@ -43,12 +43,13 @@ wget -O /etc/nginx/conf.d/webvirt.conf "https://git.io/fpNhE"; nginx -t && nginx
 # killall python ; killall /usr/bin/python
 ##
 
-cat /etc/group | grep libvirtd > /dev/null && usermod -a -G libvirtd www-data && id www-data || usermod -a -G libvirt www-data && id www-data
 
 # ubuntu
 #usermod -a -G libvirtd www-data && id www-data
 # debian
 #usermod -a -G libvirt www-data && id www-data
+
+cat /etc/group | grep libvirtd > /dev/null && usermod -a -G libvirtd www-data && id www-data || usermod -a -G libvirt www-data && id www-data
 
 # WEBVIRTPATH=/var/www/webvirtmgr
 # run as user www-data 
