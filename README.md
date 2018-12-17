@@ -2,6 +2,9 @@ Author: Aysad Kozanoglu
 
 KVM Virtualisation production ready tested on : online.net > pro-6-M dedicated
 
+see also for webvirmgr web gui instalallation for kvm
+https://github.com/AysadKozanoglu/webvirtmgr/wiki
+
 # KVM_Virtualisation
 KVM Virtualisation full headless install and guest vm management
 
