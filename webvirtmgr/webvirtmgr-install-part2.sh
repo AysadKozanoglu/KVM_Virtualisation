@@ -15,12 +15,13 @@ cd $WEBVIRTPATH
 
 pip install -r requirements.txt 
 
-# set your username / password for webvirtMgr
-# /var/www/webvirtmgr/manage.py createsuperuser
-
-# syncdb 
+# syncdb - set first user for webvirt
 # yes
 # /var/www/webvirtmgr/manage.py syncdb
+
+# add more users: 
+# set your username / password for webvirtMgr
+# /var/www/webvirtmgr/manage.py createsuperuser
 
 # initial collection
 # yes
