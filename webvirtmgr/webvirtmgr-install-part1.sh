@@ -18,6 +18,8 @@ wget -O - https://git.io/fpAfx | sudo sh
 # needed packages for webvirtmgr
 apt-get install git python-pip python-libvirt python-libxml2 novnc supervisor nginx -y --yes
 
+clear
+printf "\033c"
 # ask to reboot server 
 wget -qO reboot.sh https://git.io/fpNpo && chmod a+x reboot.sh ; sh reboot.sh
 
