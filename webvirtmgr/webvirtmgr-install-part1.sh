@@ -2,7 +2,7 @@
 # Author: Aysad Kozanoglu
 #
 # Quick Launch Script:
-# wget -O - https://git.io/fpAJH | sh
+# wget -O part1.sh https://git.io/fpAJH && sh part1.sh
 
 askReboot() {
 while true; do
