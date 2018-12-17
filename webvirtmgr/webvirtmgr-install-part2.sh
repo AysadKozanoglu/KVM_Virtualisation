@@ -50,6 +50,7 @@ cat /etc/group | grep libvirtd > /dev/null && usermod -a -G libvirtd www-data &&
 # debian
 #usermod -a -G libvirt www-data && id www-data
 
+# WEBVIRTPATH=/var/www/webvirtmgr
 # run as user www-data 
 #sudo  -u www-data bash -c "$PYTHONBIN ${WEBVIRTPATH}/console/webvirtmgr-console >> ${WEBVIRTPATH}/webvirtmgrService.log 2>&1 &" 
 
