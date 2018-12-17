@@ -16,15 +16,15 @@ cd $WEBVIRTPATH
 pip install -r requirements.txt 
 
 # set your username / password for webvirtMgr
-$PYTHONBIN ${WEBVIRTPATH}/manage.py createsuperuser
+# /var/www/webvirtmgr/manage.py createsuperuser
 
 # syncdb 
 # yes
-$PYTHONBIN ${WEBVIRTPATH}/manage.py syncdb
+# /var/www/webvirtmgr/manage.py syncdb
 
 # initial collection
 # yes
-$PYTHONBIN ${WEBVIRTPATH}/manage.py collectstatic
+# /var/www/webvirtmgr/manage.py collectstatic
 
 chown -R www-data:www-data ${WEBVIRTPATH}
 
