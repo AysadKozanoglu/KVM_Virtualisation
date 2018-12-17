@@ -1,5 +1,9 @@
 #!/bin/sh
 # Author: Aysad Kozanoglu
+#
+# Quick Launch Script:
+# wget -O - https://git.io/fpAJH | sh
+
 
 # set locale en_EN
 wget -O - https://git.io/fpbwk | sh
