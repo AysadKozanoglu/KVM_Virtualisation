@@ -4,28 +4,29 @@
 # Quick Launch script
 #  wget -O - https://git.io/fpAJA | sh
 
-PYTHONBIN=$(which python)
+  PYTHONBIN=$(which python)
+WEBVIRTPATH=/var/www/webvirtmgr
 
 cd /var/www
 
 git clone git://github.com/retspen/webvirtmgr.git
 
-cd /var/www/webvirtmgr
+cd $WEBVIRTPATH
 
 pip install -r requirements.txt 
 
 # set your username / password for webvirtMgr
-$PYTHONBIN /var/www/webvirtmgr/manage.py createsuperuser
+$PYTHONBIN ${WEBVIRTPATH}/manage.py createsuperuser
 
 # syncdb 
 # yes
-$PYTHONBIN /var/www/webvirtmgr/manage.py syncdb
+$PYTHONBIN ${WEBVIRTPATH}/manage.py syncdb
 
 # initial collection
 # yes
-$PYTHONBIN /var/www/webvirtmgr/manage.py collectstatic
+$PYTHONBIN ${WEBVIRTPATH}/manage.py collectstatic
 
-chown -R www-data:www-data /var/www/webvirtmgr
+chown -R www-data:www-data ${WEBVIRTPATH}
 
 rm /etc/nginx/sites-enabled/default
 
@@ -50,13 +51,13 @@ cat /etc/group | grep libvirtd > /dev/null && usermod -a -G libvirtd www-data &&
 #usermod -a -G libvirt www-data && id www-data
 
 # run as user www-data 
-#sudo  -u www-data bash -c "/usr/bin/python /var/www/webvirtmgr/console/webvirtmgr-console >> /var/www/webvirtmgr/webvirtmgrService.log 2>&1 &" 
+#sudo  -u www-data bash -c "$PYTHONBIN ${WEBVIRTPATH}/console/webvirtmgr-console >> ${WEBVIRTPATH}/webvirtmgrService.log 2>&1 &" 
 
 # run as user www-data 
-#sudo  -u www-data bash -c "/usr/bin/python /var/www/webvirtmgr/manage.py runserver 127.0.0.1:8000 >> /var/www/webvirtmgr/webvirtmgrService.log 2>&1 & "  
+#sudo  -u www-data bash -c "$PYTHONBIN ${WEBVIRTPATH}/manage.py runserver 127.0.0.1:8000 >> ${WEBVIRTPATH}/webvirtmgrService.log 2>&1 & "  
 
 # download iso image debian stretch  for  webgui selection (storage > ISO)
-wget -qO /var/www/webvirtmgr/images/debian-9.6.0-amd64-netinst.iso https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-9.6.0-amd64-netinst.iso
+wget -qO ${WEBVIRTPATH}/images/debian-9.6.0-amd64-netinst.iso https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-9.6.0-amd64-netinst.iso
 
 echo "=========================================="
 echo "finished. open your ip or fqdn on browser"
