@@ -2,7 +2,7 @@
 # Author: Aysad Kozanoglu
 #
 # Quick Launch script
-#  wget -O - https://git.io/fpAJA | sh
+# wget -O part2.sh https://git.io/fpAJA && sh part2.sh
 
   PYTHONBIN=$(which python)
 WEBVIRTPATH=/var/www/webvirtmgr
