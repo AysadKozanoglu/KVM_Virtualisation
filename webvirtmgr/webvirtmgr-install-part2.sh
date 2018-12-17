@@ -15,20 +15,6 @@ cd $WEBVIRTPATH
 
 pip install -r requirements.txt 
 
-# syncdb - set first user for webvirt
-# yes
-# /var/www/webvirtmgr/manage.py syncdb
-
-# add more users: 
-# set your username / password for webvirtMgr
-# /var/www/webvirtmgr/manage.py createsuperuser
-
-# initial collection
-# yes
-# /var/www/webvirtmgr/manage.py collectstatic
-
-chown -R www-data:www-data ${WEBVIRTPATH}
-
 rm /etc/nginx/sites-enabled/default
 
 # get webvirtmgr nginx config port 80
@@ -51,6 +37,21 @@ wget -O /etc/nginx/conf.d/webvirt.conf "https://git.io/fpNhE"; nginx -t && nginx
 #usermod -a -G libvirt www-data && id www-data
 
 cat /etc/group | grep libvirtd > /dev/null && usermod -a -G libvirtd www-data && id www-data || usermod -a -G libvirt www-data && id www-data
+
+
+# syncdb - set first user for webvirt
+# yes
+# /var/www/webvirtmgr/manage.py syncdb
+
+# add more users: 
+# set your username / password for webvirtMgr
+# /var/www/webvirtmgr/manage.py createsuperuser
+
+# initial collection
+# yes
+# /var/www/webvirtmgr/manage.py collectstatic
+
+chown -R www-data:www-data ${WEBVIRTPATH}
 
 # WEBVIRTPATH=/var/www/webvirtmgr
 # run as user www-data 
