@@ -1,5 +1,8 @@
 #!/bin/sh
 # Author: Aysad Kozanoglu
+#
+# Quick Launch script
+#  wget -O - https://git.io/fpAJA | sh
 
 cd /var/www
 
