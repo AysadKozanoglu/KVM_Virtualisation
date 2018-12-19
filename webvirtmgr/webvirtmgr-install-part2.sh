@@ -63,9 +63,13 @@ chown -R www-data:www-data ${WEBVIRTPATH}
 # download iso image debian stretch  for  webgui selection (storage > ISO)
 wget -qO ${WEBVIRTPATH}/images/debian-9.6.0-amd64-netinst.iso https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-9.6.0-amd64-netinst.iso
 
-echo "=========================================="
-echo "finished. open your ip or fqdn on browser"
-echo "=========================================="
+echo "=================
+echo "Core finished.  "
+echo "Now do the steps finalize and start services"
+echo " see wiki section"
+echo " part2-finalize and part2-services"
+echo " wiki: https://github.com/AysadKozanoglu/webvirtmgr/wiki/Install-WebVirtMgr"
+echo "================"
 
 # end of installation 
 # open in browser your ip or fpdn(if server_name configured in nginx conf)
