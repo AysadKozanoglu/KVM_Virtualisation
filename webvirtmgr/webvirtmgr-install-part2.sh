@@ -9,7 +9,7 @@ WEBVIRTPATH=/var/www/webvirtmgr
 
 cd /var/www
 
-git clone git://github.com/retspen/webvirtmgr.git
+git clone https://github.com/AysadKozanoglu/webvirtmgr.git
 
 cd $WEBVIRTPATH
 
