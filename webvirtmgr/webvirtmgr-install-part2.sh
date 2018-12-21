@@ -63,7 +63,7 @@ chown -R www-data:www-data ${WEBVIRTPATH}
 # download iso image debian stretch  for  webgui selection (storage > ISO)
 wget -qO ${WEBVIRTPATH}/images/debian-9.6.0-amd64-netinst.iso https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-9.6.0-amd64-netinst.iso
 
-echo "=================
+echo "================="
 echo "Core finished.  "
 echo "Now do the steps finalize and start services"
 echo " see wiki section"
