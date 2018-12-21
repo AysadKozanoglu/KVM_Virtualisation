@@ -15,6 +15,20 @@ while true; do
 done
 }
 
+showLabel() {
+clear;
+echo "=================================================="
+echo "KVM CLoud Virtualisation - Auto installer script"
+echo "author: Aysad Kozanoglu"
+echo ""
+read -p  "Enter to begin"
+echo ""
+echo "==================================================="
+
+}
+
+showLabel
+
 # set locale en_EN
 wget -O - https://git.io/fpbwk | sh
 
