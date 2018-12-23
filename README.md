@@ -7,7 +7,7 @@ tested on : online.net > pro-6-M dedicated
 
 ### see also my CLoud Virutalisation with KVM
 
-https://github.com/AysadKozanoglu/webvirtmgr/wiki
+https://github.com/AysadKozanoglu/Cloud_Virtualisation_Auto_installer/wiki
 
 
 # KVM_Virtualisation
