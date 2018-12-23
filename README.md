@@ -1,8 +1,11 @@
 Author: Aysad Kozanoglu
 
-KVM Virtualisation production ready tested on : online.net > pro-6-M dedicated
+## KVM Virtualisation production ready 
+supported : Debian Jessie 8.x, ubuntu 16.04, 18.04 
 
-see also for webvirtMgr web gui installation for kvm
+tested on : online.net > pro-6-M dedicated
+
+### see also my CLoud Virutalisation with KVM
 
 https://github.com/AysadKozanoglu/webvirtmgr/wiki
 
