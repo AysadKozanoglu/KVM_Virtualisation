@@ -26,7 +26,9 @@ echo "+ Ubuntu 18.04"
 echo "+ Debian 8 Jessie"
 echo "+ Debuan 9 stretch "
 echo "Your System is:"
+
 lsb_release -a
+
 echo   "Enter to begin or ctrl+c to break"
 read -s -n 1 key
 }
