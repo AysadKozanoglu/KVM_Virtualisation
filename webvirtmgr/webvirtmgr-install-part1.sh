@@ -20,7 +20,13 @@ clear;
 echo "=================================================="
 echo "KVM CLoud Virtualisation - Auto installer script"
 echo "author: Aysad Kozanoglu"
-echo ""
+echo "this installer is for:"
+echo "+ Ubuntu 16.04"
+echo "+ Ubuntu 18.04"
+echo "+ Debian 8 Jessie"
+echo "+ Debuan 9 stretch "
+echo "Your System is:"
+lsb_release -a
 echo   "Enter to begin or ctrl+c to break"
 read -s -n 1 key
 }
@@ -39,7 +45,8 @@ apt update
 wget -O - https://git.io/fpAfx | sudo sh
 
 # needed packages for webvirtmgr
-apt-get install git python-pip python-libvirt python-libxml2 novnc supervisor nginx -y --yes
+apt-get install git python-pip python-libvirt python-libxml2 novnc supervisor nginx qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils virt-manager libguestfs-tools libosinfo-bin -y --yes
+
 
 clear
 printf "\033c"
