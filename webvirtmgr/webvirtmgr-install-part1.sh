@@ -47,7 +47,9 @@ apt update
 wget -O - https://git.io/fpAfx | sudo sh
 
 # needed packages for webvirtmgr
-apt-get install git python-pip python-libvirt python-libxml2 novnc supervisor nginx qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils virt-manager libguestfs-tools libosinfo-bin -y --yes
+apt-get install git python-pip python-libvirt python-libxml2 novnc supervisor nginx qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils libguestfs-tools libosinfo-bin -y --yes
+# only if native gui needed 
+# apt install -y --yes virt-manager 
 
 
 clear
